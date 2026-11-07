@@ -15,6 +15,7 @@ app.use(morgan('tiny'));
 let specs;
 try {
   specs = yaml.load(fs.readFileSync('./docs/openapi.yaml', 'utf8'));
+  console.log(specs.paths['/tasks'].get.parameters);
 } catch (error) {
   console.log('Failed to load OpenAPI specification', error);
   process.exit(1);

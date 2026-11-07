@@ -13,9 +13,20 @@ tags:
 paths:
   /tasks:
     get:
-      summary: List all tasks
+      summary: List all tasks TESTS
       tags:
         - Tasks
+      
+      parameters:
+        - name: completed
+          in: query
+          required: false
+          description: Filter tasks by completion status
+          schema:
+            type: string
+            enum:
+            - 'true'
+            - 'false'
       responses:
         '200':
           description: OK
