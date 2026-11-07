@@ -3,7 +3,7 @@ info:
   title: Task API
   version: 1.0.0
 servers:
-  - url: http://task-service-k3j6.onrender.com
+  - url: https://task-service-k3j6.onrender.com
     description: Render deployment
 tags:
   - name: Tasks
